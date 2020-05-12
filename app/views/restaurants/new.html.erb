@@ -1,0 +1,27 @@
+<h1>Add a Restaurant</h1>
+
+<!-- method => http verb -->
+<!-- action => path -->
+<!-- <form action="/restaurants" method="post">
+  <input type="text" name="name">
+  <input type="text" name="address">
+  <input type="number" name="rating">
+  <input type="submit">
+</form> -->
+
+<%= form_for(@restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<!--
+params[:adddress]
+params[:restaurant][:adddress]
+params[:restaurant][:name]
+
+params[:restaurant] -->
